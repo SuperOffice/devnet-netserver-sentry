@@ -43,8 +43,8 @@ namespace SuperOffice.DevNet.SentryPlugin
                 State = state
             };
 
-            // This produces an item and puts it on the queue. 
-            // A background thread will dequeue the item and process it in NotifyWebhooks.
+            // This produces an item and puts it on the queue.
+            // A background thread will dequeue the item and process it in SentryRightsDispatcher.ProcessTasks.
             GetDispatcher().Enqueue(taskInfo);
 
         }
@@ -62,8 +62,8 @@ namespace SuperOffice.DevNet.SentryPlugin
                 State = state
             };
 
-            // This produces an item and puts it on the queue. 
-            // A background thread will dequeue the item and process it in NotifyWebhooks.
+            // This produces an item and puts it on the queue.
+            // A background thread will dequeue the item and process it in SentryRightsDispatcher.ProcessTasks.
             GetDispatcher().Enqueue(taskInfo);
         }
 
@@ -79,8 +79,8 @@ namespace SuperOffice.DevNet.SentryPlugin
                 Message = message
             };
 
-            // This produces an item and puts it on the queue. 
-            // A background thread will dequeue the item and process it in NotifyWebhooks.
+            // This produces an item and puts it on the queue.
+            // A background thread will dequeue the item and process it in SentryRightsDispatcher.ProcessTasks.
             GetDispatcher().Enqueue(taskInfo);
         }
 
