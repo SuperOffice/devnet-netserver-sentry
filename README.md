@@ -7,4 +7,4 @@ This application uses SuperOffice nuget packages that must be restored before co
 
 Applications like DebugView (Run As Administrator) can be used to monitor the real-time output.
 
-![Output](assets/images/DebugViewOutput.PNG)
+![Output](./assets/images/DebugViewOutput.PNG)
