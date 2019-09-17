@@ -71,11 +71,19 @@ namespace SuperOffice.DevNet.SentryPlugin
     public class SentryPluginQueryTableUpdaterProject : ISentryPluginQueryTableUpdater
     {
         #region ISentryPluginQueryTableUpdater Members
-
+        
         public void ModifySelect(Select sql, TableInfo tableInfo)
         {
+            //var currentUser = SuperOffice.SoContext.CurrentPrincipal;
+            //var projectMemberTableInfo = sql.GetTableInfos().Where(ti => ti.TableName.Equals("ProjectMember", StringComparison.InvariantCultureIgnoreCase)).FirstOrDefault() as ProjectMemberTableInfo;
+
+
             if (Constants.EnableProject)
+            {
                 sql.ReturnFields.Add(((ProjectTableInfo)tableInfo).Name);
+                //sql.JoinRestriction.InnerJoin(projectMemberTableInfo.PersonId.Equal(currentUser.PersonId));
+            }           
+
         }
         #endregion
     }

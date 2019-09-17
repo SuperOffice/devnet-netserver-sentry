@@ -9,9 +9,9 @@ namespace SuperOffice.DevNet.SentryPlugin
     public static class Constants
     {
         public static bool EnableAppointment { get; set; } = false;
-        public static bool EnableContact     { get; set; } = true;
+        public static bool EnableContact     { get; set; } = false;
         public static bool EnablePerson      { get; set; } = false;
-        public static bool EnableProject     { get; set; } = false;
+        public static bool EnableProject     { get; set; } = true;
         public static bool EnableRelation    { get; set; } = false;
         public static bool EnableSale        { get; set; } = false;
         public static bool EnableSelection   { get; set; } = false;
