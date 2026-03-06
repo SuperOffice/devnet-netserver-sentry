@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MimeKit" Version="4.15.1" />
     <PackageReference Include="SuperOffice.NetServer.Core" Version="11.10.725" />
     <PackageReference Include="SuperOffice.ContinuousDatabase" Version="11.10.725" />
   </ItemGroup>
