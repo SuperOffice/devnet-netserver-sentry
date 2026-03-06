@@ -34,8 +34,8 @@ namespace SuperOffice.DevNet.SentryPlugin
         {
             var taskInfo = new SentryTaskInfo()
             {
-                AssociateId = SoContext.CurrentPrincipal.AssociateId,
-                AssociateName = SoContext.CurrentPrincipal.Associate,
+                AssociateId = SoContext.CurrentPrincipal.GetAssociateId(),
+                AssociateName = SoContext.CurrentPrincipal.GetAssociate(),
                 TableRights = tableRights,
                 Type = RightsType.TableRights,
                 SentryName = sentryName,
@@ -53,8 +53,8 @@ namespace SuperOffice.DevNet.SentryPlugin
         {
             var taskInfo = new SentryTaskInfo()
             {
-                AssociateId = SoContext.CurrentPrincipal.AssociateId,
-                AssociateName = SoContext.CurrentPrincipal.Associate,
+                AssociateId = SoContext.CurrentPrincipal.GetAssociateId(),
+                AssociateName = SoContext.CurrentPrincipal.GetAssociate(),
                 FieldRights = fieldRights,
                 Type = RightsType.FieldRights,
                 SentryName = sentryName,
@@ -71,8 +71,8 @@ namespace SuperOffice.DevNet.SentryPlugin
         {
             var taskInfo = new SentryTaskInfo()
             {
-                AssociateId = SoContext.CurrentPrincipal.AssociateId,
-                AssociateName = SoContext.CurrentPrincipal.Associate,
+                AssociateId = SoContext.CurrentPrincipal.GetAssociateId(),
+                AssociateName = SoContext.CurrentPrincipal.GetAssociate(),
                 SentryName = sentryName,
                 SentryAddOnName = sentryAddOnName,
                 State = SentryState.Message,
