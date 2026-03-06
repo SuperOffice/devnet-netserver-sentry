@@ -14,24 +14,18 @@ namespace SuperOffice.DevNet.SentryPlugin
         const string generalMsg = "SentryPlugin: {0}";
         const string tableString = @"   {0} Table Rights: {1}";
         const string fieldString = @"       {0} Field Rights: {1}";
-        int _timeout = 2;
-
-        Util.ThreadedQueueProcessor<SentryTaskInfo> _queue = null;
-
         [SoInjectConstructor]
         private SentryRightsDispatcher()
         {
-            _queue = new Util.ThreadedQueueProcessor<SentryTaskInfo>(ProcessTasks, "RightsDumper", _timeout);
         }
 
         public void Enqueue(SentryTaskInfo sentryTaskInfo)
         {
-            _queue.AddWork(sentryTaskInfo);
+            ProcessTasks(sentryTaskInfo);
         }
 
         internal void WaitForSentryTasksToComplete()
         {
-            _queue.AwaitDisposedWorked();
         }
 
         private void ProcessTasks(SentryTaskInfo sentryTaskInfo)
